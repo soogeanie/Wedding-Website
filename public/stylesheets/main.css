@@ -1,0 +1,441 @@
+* {
+  font-family: raleway;
+  font-size: 16px;
+}
+
+body, main {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.home {
+  background: #fff url('/images/image-19.jpg') no-repeat center center fixed;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.navbar {
+  border: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  margin-bottom: 0;
+}
+
+.navbar .container-fluid, .navbar .container-fluid .navbar-collapse {
+  margin: 0;
+  padding: 0;
+}
+
+.nav.navbar-nav {
+  display: inline-block;
+  *display:inline;
+  float: none;
+  margin: 0 auto;
+  text-align: center;
+  zoom:1
+}
+
+.nav.navbar-nav li a, .nav.navbar-nav li a:focus, .nav.navbar-nav li a:link, .nav.navbar-nav li a:active {
+  background: none;
+  color: #fff;
+  font-size: 0.875em;
+  text-shadow: 1px 1px 1px #333;
+  text-decoration: none;
+}
+
+.nav.navbar-nav li a:hover {
+  background: none;
+  color: #86E2D5;
+}
+
+.navbar-collapse {
+  text-align: center;
+}
+
+.navbar .container-fluid .navbar-collapse {
+  z-index: 1000;
+}
+
+.hamburger {
+  appearance: none;
+  background-color: #86E2D5;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-size: 0;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  text-indent: -9999px;
+  transition: background 0.3s;
+  width: 50px;
+}
+
+.hamburger:focus {
+  outline: none;
+}
+
+.hamburger span {
+  background: #fff;
+  display: block;
+  height: 3px;
+  left: 10px;
+  position: absolute;
+  right: 10px;
+  top: 22px;
+}
+
+.hamburger span:before,
+.hamburger span:after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.hamburger span::before {
+  top: 10px;
+}
+
+.hamburger span::after {
+  bottom: 10px;
+}
+
+.close-x {
+  background-color: #86E2D5;
+}
+
+.close-x span {
+  transition: background 0s 0.3s;
+}
+
+.close-x span::before,
+.close-x span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.close-x span::before {
+  transition-property: top, transform;
+}
+
+.close-x span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.close-x.is-active {
+  background-color: #003171;
+}
+
+.close-x.is-active span {
+  background: none;
+}
+
+.close-x.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.close-x.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.close-x.is-active span::before,
+.close-x.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+.navbar-header.is-active {
+  background-color: #003171;
+}
+
+.info {
+  height: 100%;
+  margin: 30px auto 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+.info img {
+  display: block;
+  margin: 0 auto;
+  max-width: 512px;
+  text-align: center;
+  width: 100%;
+}
+
+footer {
+  bottom: 0;
+  background-color: #fff;
+  color: #333;
+  height: 50px;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  width: 100%;
+  z-index: 1030;
+}
+
+footer .made-with-love {
+  padding: 15px 0;
+}
+
+.glyphicon-heart {
+  color: #F22613;
+}
+
+footer a, footer a:focus, footer a:link, footer a:active {
+  color: #333;
+}
+
+footer a:hover {
+  color: #003171;
+}
+
+.desktop-hide {
+  display: none;
+}
+
+.ceremony, .aboutus, .registry, .rsvp {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+}
+
+.ceremony-info, .aboutus-info, .registry-info, .rsvp-info {
+  margin-bottom: 75px;
+}
+
+.ceremony .navbar, .aboutus .navbar, .registry .navbar,
+.rsvp .navbar {
+  background-color: #003171;
+}
+
+.ceremony .nav.navbar-nav li a, .ceremony .nav.navbar-nav li a:focus,
+.ceremony .nav.navbar-nav li a:link, .ceremony .nav.navbar-nav li a:active,
+.aboutus .nav.navbar-nav li a, .aboutus .nav.navbar-nav li a:focus,
+.aboutus .nav.navbar-nav li a:link, .aboutus .ceremony .nav.navbar-nav li a:active,
+.registry .nav.navbar-nav li a, .registry .nav.navbar-nav li a:focus,
+.registry .nav.navbar-nav li a:link, .registry .ceremony .nav.navbar-nav li a:active,
+.rsvp .nav.navbar-nav li a, .rsvp .nav.navbar-nav li a:focus,
+.rsvp .nav.navbar-nav li a:link, .rsvp .ceremony .nav.navbar-nav li a:active {
+  text-shadow: 0.5px 0.5px 0.5px #333;
+}
+
+.ceremony .nav.navbar-nav li a:hover, .aboutus .nav.navbar-nav li a:hover, .registry .nav.navbar-nav li a:hover,
+.rsvp .nav.navbar-nav li a:hover {
+  background: none;
+  color: #86E2D5;
+}
+
+.ceremony .hamburger, .aboutus .hamburger, .registry .hamburger,
+.rsvp .hamburger {
+  background-color: #003171;
+}
+
+footer#ceremony, footer#aboutus, footer#registry, footer#rsvp {
+  border-top: 1px solid #eee;
+}
+
+.ceremony-info header, .aboutus-info header, .registry-info header, .rsvp-info header {
+  font-family: Sacramento, Georgia, serif;
+  font-size: 3em;
+  font-weight: 700;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.ceremony-info article, .aboutus-info article, .registry-info article, .rsvp-info article {
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.hotel-block h3, .wedding-info h3 {
+  font-weight: 700;
+}
+
+.hotel-block-blurb {
+  margin: 10px auto;
+}
+
+.hotel-info div, .wedding-info div {
+  margin: 5px auto;
+}
+
+.hotel-photo, .gallery-photo {
+  height: auto;
+  margin: 10px 0;
+  width: 349px;
+}
+
+#oshandsujin-carousel {
+  height: 533px;
+  margin: 0 auto;
+  text-align: center;
+  width: 800px;
+}
+
+.amazon, .surlatable {
+  height: auto;
+  margin: 20px auto;
+  text-align: center;
+  width: 300px;
+}
+
+.potterybarn {
+  height: auto;
+  margin: 30px auto 20px auto;
+  text-align: center;
+  width: 500px;
+}
+
+form {
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.instructions {
+  margin: 20px auto;
+}
+
+label, #submit {
+  font-size: 1.125em;
+}
+
+.form-control {
+  font-size: 1em;
+  height: 50px;
+}
+
+input:focus {
+  outline: none;
+}
+
+#plus-one, #plus-one-full-name, #diet-restrictions, #plus-one-diet-restrictions {
+  display: none;
+}
+
+#submit {
+  background-color: #86E2D5;
+  border: none;
+  color: #fff;
+}
+
+#submit:hover {
+  background-color: #71ddce;
+}
+
+.contact {
+  margin: 10px auto;
+}
+
+.contact a {
+  color: #003171;
+}
+
+.registry-tagline {
+  margin: 0 auto 40px auto;
+  text-align: center;
+  width: 100%;
+}
+
+.rsvp-thankyou {
+  display: none;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.form-control.error {
+  border: 1px solid #F22613;
+}
+
+label.error {
+  color: #F22613;
+}
+
+@media only screen and (max-width: 768px) {
+  .info img {
+    padding: 0 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .desktop-hide {
+    display: block;
+  }
+
+  .navbar .container-fluid {
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .container-fluid>.navbar-collapse, .container-fluid>.navbar-header, .container>.navbar-collapse, .container>.navbar-header {
+    margin: 0 auto;
+  }
+
+  .navbar-collapse {
+    background-color: #003171;
+    border-top: none;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -o-box-shadow: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+  .nav.navbar-nav {
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .nav.navbar-nav li a, .nav.navbar-nav li a:link, .nav.navbar-nav li a:active {
+    font-size: 1em;
+    padding: 30px 15px;
+  }
+
+  .nav.navbar-nav li a:hover {
+    background-color: #002658;
+    color: #fff;
+  }
+}
+
+
+@media only screen and (max-width: 479px) {
+  .radio-inline {
+    display: block;
+  }
+
+  .radio-inline+.radio-inline {
+    margin-left: 0;
+  }
+}
